@@ -1,12 +1,224 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.example.kevin.poke.Pokedex">
 
-    <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+                android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                tools:context="com.example.kevin.poke.Pokedex"
+                android:weightSum="1"
+                android:gravity="center_horizontal">
+
+    <ImageView
+        android:layout_width="115dp"
+        android:layout_height="115dp"
+        android:id="@+id/imgPoke1Pic"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:src="@drawable/pokeball"
+        android:contentDescription="Poke1 pic"/>
+
+    <AutoCompleteTextView
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtCalcPoke1"
+        android:layout_weight="0.15"
+        android:hint="Name"
+        android:layout_alignBottom="@+id/imgPoke1Pic"
+        android:layout_toRightOf="@+id/imgPoke1Pic"
+        android:layout_toEndOf="@+id/imgPoke1Pic"/>
+
+    <AutoCompleteTextView
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtCalcPoke2"
+        android:layout_weight="0.15"
+        android:hint="Name"
+        android:layout_alignTop="@+id/txtCalcPoke1"
+        android:layout_toLeftOf="@+id/imgPoke2Pic"
+        android:layout_toStartOf="@+id/imgPoke2Pic"
+        android:textAlignment="textEnd"/>
+
+    <ImageView
+        android:layout_width="115dp"
+        android:layout_height="115dp"
+        android:id="@+id/imgPoke2Pic"
+        android:src="@drawable/pokeball"
+        android:contentDescription="Poke2 pic"
+        android:layout_alignTop="@+id/imgPoke1Pic"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/txtResult"
+        android:layout_alignTop="@+id/imgPoke1Pic"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:layout_alignLeft="@+id/txtCalcPoke1"
+        android:layout_alignStart="@+id/txtCalcPoke1"
+        android:layout_alignRight="@+id/txtPoke2Damage"
+        android:layout_alignEnd="@+id/txtPoke2Damage"/>
+
+    <AutoCompleteTextView
+        android:layout_width="180dp"
+        android:layout_height="40dp"
+        android:id="@+id/txtCalcPoke1Move4"
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentStart="false"
+        android:layout_alignEnd="@+id/txtCalcPoke1Move3"
+        android:hint="Move 4"
+        android:height="35dp"
+        android:layout_below="@+id/txtCalcPoke1Move3"/>
+
+    <AutoCompleteTextView
+        android:layout_width="180dp"
+        android:layout_height="40dp"
+        android:id="@+id/txtCalcPoke1Move3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:hint="Move 3"
+        android:height="35dp"
+        android:layout_below="@+id/txtCalcPoke1Move2"
+        android:layout_alignRight="@+id/txtCalcPoke1Move2"/>
+
+    <AutoCompleteTextView
+        android:layout_width="180dp"
+        android:layout_height="40dp"
+        android:id="@+id/txtCalcPoke1Move2"
+        android:hint="Move 2"
+        android:height="35dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/txtCalcPoke1Move1"/>
+
+    <AutoCompleteTextView
+        android:layout_width="180dp"
+        android:layout_height="40dp"
+        android:id="@+id/txtCalcPoke1Move1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="false"
+        android:hint="Move 1"
+        android:height="35dp"
+        android:layout_below="@+id/btnCalcPoke1Stats"
+        android:layout_marginTop="20dp"/>
+
+    <AutoCompleteTextView
+        android:layout_width="180dp"
+        android:layout_height="35dp"
+        android:id="@+id/txtCalcPoke2Move1"
+        android:hint="Move 1"
+        android:height="35dp"
+        android:layout_above="@+id/txtCalcPoke1Move2"
+        android:layout_alignRight="@+id/imgPoke2Pic"
+        android:layout_alignEnd="@+id/imgPoke2Pic"/>
+
+    <AutoCompleteTextView
+        android:layout_width="180dp"
+        android:layout_height="35dp"
+        android:id="@+id/txtCalcPoke2Move2"
+        android:hint="Move 2"
+        android:height="35dp"
+        android:layout_below="@+id/txtCalcPoke2Move1"
+        android:layout_alignRight="@+id/txtCalcPoke2Move1"
+        android:layout_alignEnd="@+id/txtCalcPoke2Move1"/>
+
+    <AutoCompleteTextView
+        android:layout_width="180dp"
+        android:layout_height="40dp"
+        android:id="@+id/txtCalcPoke2Move3"
+        android:hint="Move 3"
+        android:height="35dp"
+        android:layout_alignEnd="@+id/txtCalcPoke2Move2"
+        android:layout_below="@+id/txtCalcPoke2Move2"
+        android:layout_alignLeft="@+id/txtCalcPoke2Move2"/>
+
+    <AutoCompleteTextView
+        android:layout_width="180dp"
+        android:layout_height="40dp"
+        android:id="@+id/txtCalcPoke2Move4"
+        android:hint="Move 4"
+        android:height="35dp"
+        android:layout_alignEnd="@+id/txtCalcPoke2Move3"
+        android:layout_alignLeft="@+id/txtCalcPoke2Move3"
+        android:layout_below="@+id/txtCalcPoke2Move3"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="STATS"
+        android:id="@+id/btnCalcPoke1Stats"
+        android:layout_below="@+id/txtCalcPoke1"
+        android:layout_toStartOf="@+id/txtCalcPoke1"
+        android:layout_marginTop="10dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="STATS"
+        android:id="@+id/btnCalcPoke2Stats"
+        android:layout_above="@+id/txtCalcPoke1Move1"
+        android:layout_toRightOf="@+id/txtCalcPoke2"
+        android:layout_toEndOf="@+id/txtCalcPoke2"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CALC IT"
+        android:id="@+id/btnCalcIt"
+        android:onClick="btnCalcItOnClick"
+        android:layout_above="@+id/txtCalcPoke1Move1"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/txtPoke2Damage"
+        android:layout_alignRight="@+id/txtCalcPoke2"
+        android:layout_alignEnd="@+id/txtCalcPoke2"
+        android:layout_above="@+id/txtCalcPoke2"
+        android:layout_alignLeft="@+id/txtCalcPoke2"
+        android:layout_alignStart="@+id/txtCalcPoke2"
+        android:layout_alignTop="@+id/txtPoke1Damage"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/txtPoke1Damage"
+        android:layout_above="@+id/txtCalcPoke1"
+        android:layout_toRightOf="@+id/imgPoke1Pic"
+        android:layout_toStartOf="@+id/txtResult"
+        android:layout_below="@+id/txtResult"
+        android:layout_alignRight="@+id/txtCalcPoke1"
+        android:layout_alignEnd="@+id/txtCalcPoke1"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/txtCalcPoke2Move2"
+        android:layout_alignTop="@+id/txtCalcPoke2Move1"
+        android:layout_toRightOf="@+id/txtCalcPoke1Move4"
+        android:layout_toEndOf="@+id/txtCalcPoke1Move4"/>
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spnWeather"
+        android:layout_below="@+id/txtPoke2Damage"
+        android:layout_toLeftOf="@+id/txtCalcPoke2"
+        android:layout_toRightOf="@+id/txtCalcPoke1"
+        android:layout_toEndOf="@+id/txtCalcPoke1"
+        android:entries="@array/weather"
+        android:spinnerMode="dropdown"/>
 
 </RelativeLayout>

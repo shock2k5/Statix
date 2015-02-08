@@ -8,4 +8,19 @@
     <string name="title_activity_chooser">Chooser</string>
     <string name="title_activity_pokedex">Pokedex</string>
 
+    <string-array name="names">
+        <item>Charizard</item>
+        <item>Sylveon</item>
+    </string-array>
+
+    <string-array name="weather">
+        <item>Clear Skies</item>
+        <item>Drought</item>
+        <item>Rain</item>
+        <item>Sand</item>
+        <item>Hail</item>
+    </string-array>
+
+    <string name="title_activity_moveset">Moveset</string>
+
 </resources>

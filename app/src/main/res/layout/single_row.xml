@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imgPokePic"
+        android:maxHeight="100dp"
+        android:maxWidth="100dp"
+        android:minHeight="100dp"
+        android:minWidth="100dp"
+        android:clickable="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:contentDescription="Poke Image"
+        android:visibility="visible"/>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Charizard"
+        android:id="@+id/txtPokeDescription"
+        android:layout_gravity="center_horizontal"
+        android:layout_toRightOf="@+id/imgPokePic"
+        android:height="32dp"
+        android:minHeight="100dp"
+        android:maxHeight="100dp"
+        android:textSize="32dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Typing"
+        android:id="@+id/txtChooserTyping"
+        android:layout_alignBottom="@+id/txtPokeDescription"
+        android:layout_alignRight="@+id/txtPokeDescription"
+        android:layout_alignEnd="@+id/txtPokeDescription"/>
+
+</RelativeLayout>

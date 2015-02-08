@@ -5,31 +5,57 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
     android:theme="@style/AppTheme"
-    android:touchscreenBlocksFocus="false">
+    android:touchscreenBlocksFocus="false"
+    android:background="#000000">
 
-    <Button
+    <ImageView
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="Calc"
-        android:id="@+id/btnCalculator"
-        android:layout_marginTop="103dp"
+        android:layout_height="fill_parent"
+        android:id="@+id/imageView2"
+        android:src="@drawable/haunter_wallpaper2"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/btnPokedex"/>
 
     <Button
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="Dex"
+        android:text="Damage Calculator"
+        android:id="@+id/btnCalculator"
+        android:onClick="onClickCalculator"
+        android:textSize="30dp"
+        android:layout_above="@+id/btnPokedex"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="40dp"
+        android:background="#FFFFFFFF"/>
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Pokedex"
         android:id="@+id/btnPokedex"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:onClick="onClickPokedex"
+        android:textSize="30dp"
+        android:layout_above="@+id/btnMoveset"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="40dp"
+        android:background="#FFFFFFFF"/>
 
     <Button
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="Make Moveset"
         android:id="@+id/btnMoveset"
-        android:layout_below="@+id/btnPokedex"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="60dp" />
+        android:onClick="onClickMoveset"
+        android:textSize="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="40dp"
+        android:visibility="visible"
+        android:background="#ffffffff"/>
+
 </RelativeLayout>
